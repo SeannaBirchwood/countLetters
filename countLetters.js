@@ -18,11 +18,19 @@
 }
 */
 
-var initialString = "Lighthouse in the house"
-
 function countLetters(uniChar) {
-	for (var nextLtr of uniChar) {
-		console.log(nextLtr);
+	uniChar = uniChar.split(" ").join("");
+	var objUniChar = {};
+		for ( var nextLtr of uniChar) {
+		if (objUniChar[nextLtr]) {
+	objUniChar[nextLtr] ++;
+	} else {
+	objUniChar[nextLtr] = 1; 
 	}
+	}
+	return objUniChar;
 }
-countLetters("Lighthouse in the house");
+
+console.log(countLetters("Lighthouse in the house"));
+
+//var objUniChar = ([initialString])
